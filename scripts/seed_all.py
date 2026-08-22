@@ -1,3 +1,5 @@
+from app.db import base_models  # noqa F401
+
 from scripts.seed_actor import seed_actors
 from scripts.seed_director import seed_directors
 from scripts.seed_genre import seed_genres
