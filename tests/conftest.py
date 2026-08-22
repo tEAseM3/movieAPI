@@ -22,7 +22,7 @@ from app.services.language import create_language
 from app.services.movie import create_movie
 
 TEST_DATABASE_URL = os.getenv(
-    "TEST_DATABASE_URL", "postgresql+psycopg2://test:test@localhost:5432/test_db"
+    "TEST_DATABASE_URL", "postgresql+psycopg2://test:test@localhost:5433/test_db"
 )
 
 engine = create_engine(TEST_DATABASE_URL)

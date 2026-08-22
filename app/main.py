@@ -32,6 +32,7 @@ is_production = settings.ENVIRONMENT.lower() == "production"
 app = FastAPI(
     title="Movie API",
     version="1.0.0",
+    description="Movie REST API",
     docs_url=None if is_production else "/docs",
     redoc_url=None if is_production else "/redoc",
     openapi_url=None if is_production else "/openapi.json",
@@ -45,9 +46,9 @@ app.add_middleware(
     allow_headers=["Authorization", "Content-Type"],
 )
 
+app.include_router(auth.router)
 app.include_router(user_public.router)
 app.include_router(user_admin.router)
-app.include_router(auth.router)
 app.include_router(language_public.router)
 app.include_router(language_admin.router)
 app.include_router(movie_public.router)
