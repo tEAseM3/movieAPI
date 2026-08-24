@@ -24,6 +24,29 @@ Docker & Docker Compose for containerization
 
 GitHub Actions for CI/CD
 
+## Deployment
+
+The API is deployed on Render and is available for testing:
+
+Swagger UI: https://movieapi-sii0.onrender.com/docs
+
+Redoc https://movieapi-sii0.onrender.com/redoc
+
+
+The deployed service is intended primarily for testing and demonstration purposes.
+
+1. Render Free Tier
+
+The API is currently hosted using Render's Free instance.
+
+Because of the free-tier limitations, the service may spin down after a period of inactivity. As a result, the first request after inactivity can take noticeably longer than subsequent requests.
+
+2. Test Accounts
+
+Admin: username: admin, password: qwerty123
+
+User: username: user, password: qwerty123
+
 ## Environment Variables 
 Main:
 
@@ -49,19 +72,7 @@ REFRESH_TOKEN_EXPIRE_DAYS: Refresh token expiration time in days.
 
 Adjust as needed
 
-## Test Accounts
 
-Admin:
-
-Username: admin
-
-Password: qwerty123
-
-User:
-
-Username: user
-
-Password: qwerty123
 
 ## Quick Start
 
